@@ -25,16 +25,16 @@ btnReset.addEventListener("click", () => {
     addPhraseToDisplay(phraseArray);
 
     // Loops through all the keyboard keys to remove classes and disabled state
-    for (i = 0; i < keyrow.length; i++) {
+    for (let i = 0; i < keyrow.length; i++) {
       let buttons = keyrow[i].children;
-      for (j = 0; j < buttons.length; j++) {
+      for (let j = 0; j < buttons.length; j++) {
         buttons[j].removeAttribute("class");
         buttons[j].removeAttribute("disabled");
       }
     }
 
     // Loops through the hearts to change the image
-    for (i = 0; i < lives.length; i++) {
+    for (let i = 0; i < lives.length; i++) {
       let heart = lives[i].children[0];
       heart.src = "images/liveHeart.png";
     }
@@ -47,7 +47,7 @@ function getRandomPhraseAsArray(arr) {
 }
 
 function addPhraseToDisplay(arr) {
-  for (i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     const letter = document.createElement("li");
     letter.textContent = arr[i];
 
@@ -66,7 +66,7 @@ qwerty.addEventListener("click", (e) => {
     const letterArr = document.getElementsByClassName("letter");
     let counter = 0;
 
-    for (i = 0; i < letterArr.length; i++) {
+    for (let i = 0; i < letterArr.length; i++) {
       const currentLetter = letterArr[i].textContent.toUpperCase();
       if (letterPressed === currentLetter) {
         letterArr[i].classList.add("show");
