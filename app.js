@@ -15,6 +15,7 @@ const phrases = [
 
 btnReset.addEventListener("click", () => {
   overlay.style.display = "none";
+  // I added this if so I just have to change the text of the button to restart the game
   if (btnReset.textContent === "Restart Game") {
     const keyrow = document.getElementsByClassName("keyrow");
     missed = 0;
@@ -23,6 +24,7 @@ btnReset.addEventListener("click", () => {
     let phraseArray = getRandomPhraseAsArray(phrases);
     addPhraseToDisplay(phraseArray);
 
+    // Loops through all the keyboard keys to remove classes and disabled state
     for (i = 0; i < keyrow.length; i++) {
       let buttons = keyrow[i].children;
       for (j = 0; j < buttons.length; j++) {
@@ -31,6 +33,7 @@ btnReset.addEventListener("click", () => {
       }
     }
 
+    // Loops through the hearts to change the image
     for (i = 0; i < lives.length; i++) {
       let heart = lives[i].children[0];
       heart.src = "images/liveHeart.png";
@@ -39,13 +42,11 @@ btnReset.addEventListener("click", () => {
 });
 
 function getRandomPhraseAsArray(arr) {
-  //do stuff to any arr that is passed in
   const randomIndex = Math.floor(Math.random() * arr.length);
   return arr[randomIndex].split("");
 }
 
 function addPhraseToDisplay(arr) {
-  // do stuff any arr that is passed in, and add to `#phrase ul`
   for (i = 0; i < arr.length; i++) {
     const letter = document.createElement("li");
     letter.textContent = arr[i];
@@ -69,10 +70,12 @@ qwerty.addEventListener("click", (e) => {
       const currentLetter = letterArr[i].textContent.toUpperCase();
       if (letterPressed === currentLetter) {
         letterArr[i].classList.add("show");
+        // The counter simbolizes how many times the letter guessed appears on the phrase
         counter += 1;
       }
     }
 
+    // If the guessed letter doesn't appear anywhere on the phrase (appears 0 times)
     if (counter === 0) {
       return null;
     } else if (counter > 0) {
@@ -85,6 +88,7 @@ qwerty.addEventListener("click", (e) => {
     const letters = document.getElementsByClassName("letter");
     const show = document.getElementsByClassName("show");
     const message = overlay.firstElementChild;
+
     if (letters.length === show.length) {
       overlay.className = "win";
       message.textContent = "Congratulations, You Won!";
