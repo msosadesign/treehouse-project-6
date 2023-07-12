@@ -1,13 +1,15 @@
-# treehouse-project-6
-This is is the sixth project of the Front End Development Techdegree, focused on testing my skills on Javascript DOM Programming
+# Treehouse Project 6
+A minigame where you have to choose letters to guess the hidden sentence.
+
+Link: https://msosadesign.github.io/treehouse-project-6/
 
 Technologies used:
 - HTML/CSS
 - Javascript
 
-This is is the sixth project of the Front End Development Techdegree, focused on testing my skills on Javascript DOM Programming. It's a minigame where you have to guess the hidden sentence, but you can only make 5 mistakes before losing.
+This is the sixth project of the Front End Development Techdegree, focused on testing my skills on Javascript DOM Programming. It's a minigame where you have to guess the hidden sentence, but you can only make 5 mistakes before losing.
 
-There's a keybard on the screen to select each letter, if you get one right, it will show it on the hidden sentence.
+There's a keyboard on the screen to select each letter, if you get one right, it will show it on the hidden sentence.
 ![image](https://github.com/msosadesign/treehouse-project-6/assets/59977013/7e851a4b-3f13-410d-a12b-15ee3d00b792)
 
 If you select a letter not present in the sentence, you lose a heart.
@@ -17,4 +19,4 @@ If you select a letter not present in the sentence, you lose a heart.
 After losing all your hearts, you have to restart the game.
 ![image](https://github.com/msosadesign/treehouse-project-6/assets/59977013/b6dd71e0-c912-4c64-ae0c-e0bb53bd5ac2)
 
-Inside the code, there's an array holding all the sentences, each time the game starts, it takes a random sentence and obscures it. When the user selects a letter, the class .chosen is applied and the code verifies how many times the letter is present in the sentence, for each match in the sentence, the class .show is applied. Finally the user wins once every letter is uncovered.
+Inside the code, there's an array holding all the sentences, each time the game starts, it takes a random sentence and obscures it. When the user selects a letter, the class .chosen is applied and the code verifies how many times the letter is present in the sentence, for each match in the sentence, the class .show is applied. Finally, the user wins once every letter is uncovered.
