@@ -11,6 +11,7 @@ There's a keybard on the screen to select each letter, if you get one right, it 
 ![image](https://github.com/msosadesign/treehouse-project-6/assets/59977013/7e851a4b-3f13-410d-a12b-15ee3d00b792)
 
 If you select a letter not present in the sentence, you lose a heart.
+
 ![image](https://github.com/msosadesign/treehouse-project-6/assets/59977013/b1506d45-8900-4a71-a5c2-06f25cff46ad)
 
 After losing all your hearts, you have to restart the game.
