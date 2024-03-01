@@ -1,7 +1,7 @@
-# Treehouse Project 6
+# Wheel of Success
 A minigame where you have to choose letters to guess the hidden sentence.
 
-Link: https://msosadesign.github.io/treehouse-project-6/
+[Live Demo](https://msosadesign.github.io/treehouse-project-6/)
 
 Technologies used:
 - HTML/CSS
